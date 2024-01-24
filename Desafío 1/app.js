@@ -16,8 +16,6 @@ enviar.addEventListener("click", function () {
       newInput += contenedor[3];
     } else if (input.value[i] === "u") {
       newInput += contenedor[4];
-    } else if (input.value[i] === "b") {
-      newInput += contenedor[1];
     } else {
       newInput += input.value[i];
     }
@@ -42,3 +40,55 @@ function updateClipboard() {
 
 let copiar = document.querySelector(".copiar");
 copiar.addEventListener("click", updateClipboard);
+
+let desencriptar = document.querySelector(".desencriptar");
+desencriptar.addEventListener("click", function () {
+  let input = document.querySelector(".input");
+  let resultado = document.querySelector(".resultado");
+  let newInput = "";
+  let i = 0;
+  while (i < input.value.length) {
+    if (input.value[i] === "a" && input.value[i + 1] === "i") {
+      newInput += "a";
+      i += 2;
+    } else if (
+      input.value[i] === "e" &&
+      input.value[i + 1] === "n" &&
+      input.value[i + 2] === "t" &&
+      input.value[i + 3] === "e" &&
+      input.value[i + 4] === "r"
+    ) {
+      newInput += "e";
+      i += 5;
+    } else if (
+      input.value[i] === "i" &&
+      input.value[i + 1] === "m" &&
+      input.value[i + 2] === "e" &&
+      input.value[i + 3] === "s"
+    ) {
+      newInput += "i";
+      i += 4;
+    } else if (
+      input.value[i] === "o" &&
+      input.value[i + 1] === "b" &&
+      input.value[i + 2] === "e" &&
+      input.value[i + 3] === "r"
+    ) {
+      newInput += "o";
+      i += 4;
+    } else if (
+      input.value[i] === "u" &&
+      input.value[i + 1] === "f" &&
+      input.value[i + 2] === "a" &&
+      input.value[i + 3] === "t"
+    ) {
+      newInput += "u";
+      i += 4;
+    } else {
+      newInput += input.value[i];
+      i++;
+    }
+  }
+  resultado.innerHTML = newInput;
+});
+
