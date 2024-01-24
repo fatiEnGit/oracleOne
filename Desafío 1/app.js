@@ -41,15 +41,15 @@ reset.addEventListener("click", function () {
   areaOutput.style.backgroundImage = 'url("fondo.png")';
 });
 
-function updateClipboard() {
+function actualizarPortapapeles() {
   let resultado = document.querySelector(".resultado");
   navigator.clipboard.writeText(resultado.innerHTML).then(() => {
     alert("Copiado al portapapeles");
   });
-}
+} //copiado de MDN Docs
 
 let copiar = document.querySelector(".copiar");
-copiar.addEventListener("click", updateClipboard);
+copiar.addEventListener("click", actualizarPortapapeles);
 
 let desencriptar = document.querySelector(".desencriptar");
 desencriptar.addEventListener("click", function () {
