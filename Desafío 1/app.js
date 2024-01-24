@@ -1,28 +1,34 @@
 let contenedor = ["ai", "enter", "imes", "ober", "ufat"];
-
+let caracteresEspeciales = /[^\w]/g;
 let enviar = document.querySelector(".enviar");
 enviar.addEventListener("click", function () {
   let input = document.querySelector(".input");
+  let inputLower = input.value.toLowerCase();
   let resultado = document.querySelector(".resultado");
   let areaOutput = document.querySelector(".area-output");
   let newInput = "";
-  for (let i = 0; i < input.value.length; i++) {
-    if (input.value[i] === "a") {
-      newInput += contenedor[0];
-    } else if (input.value[i] === "e") {
-      newInput += contenedor[1];
-    } else if (input.value[i] === "i") {
-      newInput += contenedor[2];
-    } else if (input.value[i] === "o") {
-      newInput += contenedor[3];
-    } else if (input.value[i] === "u") {
-      newInput += contenedor[4];
-    } else {
-      newInput += input.value[i];
+  if (inputLower === input.value && !caracteresEspeciales.test(input.value)) {
+    for (let i = 0; i < input.value.length; i++) {
+      if (input.value[i] === "a") {
+        newInput += contenedor[0];
+      } else if (input.value[i] === "e") {
+        newInput += contenedor[1];
+      } else if (input.value[i] === "i") {
+        newInput += contenedor[2];
+      } else if (input.value[i] === "o") {
+        newInput += contenedor[3];
+      } else if (input.value[i] === "u") {
+        newInput += contenedor[4];
+      } else {
+        newInput += input.value[i];
+      }
     }
+
+    resultado.innerHTML = newInput;
+    areaOutput.style.backgroundImage = "none";
+  } else {
+    alert("Solo se aceptan letras minúsculas y sin caracteres especiales");
   }
-  resultado.innerHTML = newInput;
-  areaOutput.style.backgroundImage = "none";
 });
 
 let reset = document.querySelector(".reset");
@@ -48,52 +54,57 @@ copiar.addEventListener("click", updateClipboard);
 let desencriptar = document.querySelector(".desencriptar");
 desencriptar.addEventListener("click", function () {
   let input = document.querySelector(".input");
+  let inputLower = input.value.toLowerCase();
   let resultado = document.querySelector(".resultado");
   let areaOutput = document.querySelector(".area-output");
   let newInput = "";
   let i = 0;
-  while (i < input.value.length) {
-    if (input.value[i] === "a" && input.value[i + 1] === "i") {
-      newInput += "a";
-      i += 2;
-    } else if (
-      input.value[i] === "e" &&
-      input.value[i + 1] === "n" &&
-      input.value[i + 2] === "t" &&
-      input.value[i + 3] === "e" &&
-      input.value[i + 4] === "r"
-    ) {
-      newInput += "e";
-      i += 5;
-    } else if (
-      input.value[i] === "i" &&
-      input.value[i + 1] === "m" &&
-      input.value[i + 2] === "e" &&
-      input.value[i + 3] === "s"
-    ) {
-      newInput += "i";
-      i += 4;
-    } else if (
-      input.value[i] === "o" &&
-      input.value[i + 1] === "b" &&
-      input.value[i + 2] === "e" &&
-      input.value[i + 3] === "r"
-    ) {
-      newInput += "o";
-      i += 4;
-    } else if (
-      input.value[i] === "u" &&
-      input.value[i + 1] === "f" &&
-      input.value[i + 2] === "a" &&
-      input.value[i + 3] === "t"
-    ) {
-      newInput += "u";
-      i += 4;
-    } else {
-      newInput += input.value[i];
-      i++;
+  if (inputLower === input.value && !caracteresEspeciales.test(input.value)) {
+    while (i < input.value.length) {
+      if (input.value[i] === "a" && input.value[i + 1] === "i") {
+        newInput += "a";
+        i += 2;
+      } else if (
+        input.value[i] === "e" &&
+        input.value[i + 1] === "n" &&
+        input.value[i + 2] === "t" &&
+        input.value[i + 3] === "e" &&
+        input.value[i + 4] === "r"
+      ) {
+        newInput += "e";
+        i += 5;
+      } else if (
+        input.value[i] === "i" &&
+        input.value[i + 1] === "m" &&
+        input.value[i + 2] === "e" &&
+        input.value[i + 3] === "s"
+      ) {
+        newInput += "i";
+        i += 4;
+      } else if (
+        input.value[i] === "o" &&
+        input.value[i + 1] === "b" &&
+        input.value[i + 2] === "e" &&
+        input.value[i + 3] === "r"
+      ) {
+        newInput += "o";
+        i += 4;
+      } else if (
+        input.value[i] === "u" &&
+        input.value[i + 1] === "f" &&
+        input.value[i + 2] === "a" &&
+        input.value[i + 3] === "t"
+      ) {
+        newInput += "u";
+        i += 4;
+      } else {
+        newInput += input.value[i];
+        i++;
+      }
     }
+    resultado.innerHTML = newInput;
+    areaOutput.style.backgroundImage = "none";
+  } else {
+    alert("Solo se aceptan letras minúsculas y sin caracteres especiales");
   }
-  resultado.innerHTML = newInput;
-  areaOutput.style.backgroundImage = "none";
 });
