@@ -1,5 +1,5 @@
 let contenedor = ["ai", "enter", "imes", "ober", "ufat"];
-let caracteresEspeciales = /[^\w]/g;
+let caracteresEspeciales = /[^\w\sñ]/g;
 let enviar = document.querySelector(".enviar");
 enviar.addEventListener("click", function () {
   let input = document.querySelector(".input");
@@ -41,15 +41,15 @@ reset.addEventListener("click", function () {
   areaOutput.style.backgroundImage = 'url("fondo.png")';
 });
 
-function actualizarPortapapeles() {
+function updateClipboard() {
   let resultado = document.querySelector(".resultado");
   navigator.clipboard.writeText(resultado.innerHTML).then(() => {
     alert("Copiado al portapapeles");
   });
-} //copiado de MDN Docs
+}
 
 let copiar = document.querySelector(".copiar");
-copiar.addEventListener("click", actualizarPortapapeles);
+copiar.addEventListener("click", updateClipboard);
 
 let desencriptar = document.querySelector(".desencriptar");
 desencriptar.addEventListener("click", function () {
