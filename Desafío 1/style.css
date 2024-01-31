@@ -55,7 +55,6 @@ div.area-output {
   border-radius: 5px;
   font-size: medium;
   border-color: aqua;
-  transition: 1s ease-in;
 }
 .input:active {
   border-color: azure;
@@ -64,7 +63,6 @@ div.area-output {
 .input:hover {
   border-color: azure;
   background-color: blanchedalmond;
-  cursor:pointer;
 }
 .resultado {
   box-sizing: border-box; /*Para que afecte al borde y padding también*/
@@ -86,6 +84,12 @@ div.area-output {
   padding: 5px;
 }
 .reset,
+.enviar,
+.copiar,
+.desencriptar:hover {
+  cursor: pointer;
+}
+.reset,
 .copiar {
   display: inline-flex;
   justify-content: center;
@@ -98,3 +102,4 @@ div.area-output {
   align-items: end;
   justify-content: center;
 }
+
