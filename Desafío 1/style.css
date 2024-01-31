@@ -55,7 +55,7 @@ div.area-output {
   border-radius: 5px;
   font-size: medium;
   border-color: aqua;
-  transition: 2s ease-in;
+  transition: 1s ease-in;
 }
 .input:active {
   border-color: azure;
