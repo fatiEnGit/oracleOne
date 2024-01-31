@@ -65,6 +65,8 @@ div.area-output {
   background-color: blanchedalmond;
 }
 .resultado {
+  box-sizing: border-box; /*Para que afecte al borde y padding también*/
+  word-wrap: break-word; /*para que el texto se rompa y adapte al max width*/
   background-color: aqua;
   border-radius: 5px;
   padding: 10px;
