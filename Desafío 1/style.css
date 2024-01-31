@@ -55,6 +55,7 @@ div.area-output {
   border-radius: 5px;
   font-size: medium;
   border-color: aqua;
+  transition: 2s ease-in;
 }
 .input:active {
   border-color: azure;
@@ -63,6 +64,7 @@ div.area-output {
 .input:hover {
   border-color: azure;
   background-color: blanchedalmond;
+  cursor:pointer;
 }
 .resultado {
   box-sizing: border-box; /*Para que afecte al borde y padding también*/
