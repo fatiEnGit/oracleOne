@@ -88,11 +88,17 @@ div.area-output {
 .enviar,
 .copiar,
 .desencriptar {
-  background-color: rgb(187, 219, 219);
-  border-radius: 0.3125rem; /* Equivalente a 5px (0.3125 * 16px) */
+  background-color: rgb(161, 255, 255);
+  border-radius: 0.6125rem;
   padding: 0.3125rem; /* Equivalente a 5px (0.3125 * 16px) */
+  font-weight: bold;
+  color: royalblue;
+  border-color: aquamarine;
+  border-style: outset;
 }
-
+.desencriptar {
+  margin-top: 0.3125rem;
+}
 .reset,
 .enviar,
 .copiar,
