@@ -99,12 +99,14 @@ div.area-output {
 .desencriptar {
   margin-top: 0.3125rem;
 }
-.reset,
-.enviar,
-.copiar,
+.reset:hover,
+.enviar:hover,
+.copiar:hover,
 .desencriptar:hover {
   cursor: pointer;
+  transform: scale(1.2);
 }
+
 
 .reset,
 .copiar {
