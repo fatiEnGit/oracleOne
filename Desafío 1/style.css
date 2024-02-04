@@ -52,7 +52,7 @@ div.area-output {
   border-color: antiquewhite;
   border-radius: 10%;
   padding: 0.3125rem; /* Equivalente a 5px (0.3125 * 16px) */
-  max-width: 31.25rem; /* Equivalente a 500px (31.25 * 16px) */
+  max-width: 80%; /* Equivalente a 500px (31.25 * 16px) */
 }
 
 .input {
