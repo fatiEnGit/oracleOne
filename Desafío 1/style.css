@@ -136,4 +136,8 @@ div.area-output {
     height: 50%;
     width: 100%;
   }
+   .explicacion {
+    max-width: 70%;
+    text-align: center;
+  }
 }
