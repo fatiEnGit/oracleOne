@@ -130,17 +130,21 @@ div.area-output {
   div.area-input {
     height: 50%;
     width: 100%;
+    word-wrap: break-word;
   }
 
   div.area-output {
     height: 50%;
     width: 100%;
+    background-size: auto;
+    background-position-y: calc(100% + 2rem);
+    word-wrap: break-word;
   }
-   .explicacion {
+  .explicacion {
     max-width: 70%;
     text-align: center;
   }
-    .reset,
+  .reset,
   .enviar,
   .copiar,
   .desencriptar {
@@ -150,5 +154,34 @@ div.area-output {
   .input,
   .resultado {
     font-size: 7vw;
+  }
+}
+@media (max-width: 500px) {
+  div.area-input {
+    font-size: 0.7rem;
+    box-sizing: border-box;
+  }
+  div.explicacion {
+    font-size: 0.7rem;
+    box-sizing: border-box;
+  }
+  div.area-output {
+    background-position-y: calc(100% + 4rem);
+    font-size: 0.7rem;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 300px) {
+  div.area-input {
+    font-size: 0.5rem;
+    box-sizing: border-box;
+  }
+  div.explicacion {
+    display: none;
+  }
+  div.area-output {
+    background-position-y: calc(100% + 4rem);
+    font-size: 0.5rem;
+    box-sizing: border-box;
   }
 }
