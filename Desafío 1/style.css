@@ -140,4 +140,15 @@ div.area-output {
     max-width: 70%;
     text-align: center;
   }
+    .reset,
+  .enviar,
+  .copiar,
+  .desencriptar {
+    display: block;
+    font-size: larger;
+  }
+  .input,
+  .resultado {
+    font-size: 7vw;
+  }
 }
