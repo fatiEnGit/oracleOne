@@ -185,3 +185,31 @@ div.area-output {
     box-sizing: border-box;
   }
 }
+@media (min-width: 1280px) {
+  header h1#titulo {
+    font-size: 3rem;
+  }
+  div.area-input {
+    font-size: 2rem;
+    width: 70%;
+  }
+  div.explicacion {
+    font-size: 2rem;
+  }
+  div .explicacion .resultado {
+    height: 10%;
+  }
+  div.area-output {
+    font-size: 2rem;
+    width: 70%;
+  }
+  .input,
+  .resultado,
+  .reset,
+  .enviar,
+  .copiar,
+  .desencriptar {
+    font-size: 2rem;
+  }
+}
+
