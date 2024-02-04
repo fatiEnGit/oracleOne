@@ -185,7 +185,7 @@ div.area-output {
     box-sizing: border-box;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 2000px) {
   header h1#titulo {
     font-size: 3rem;
   }
