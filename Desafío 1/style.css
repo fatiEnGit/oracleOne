@@ -149,7 +149,7 @@ div.area-output {
   .copiar,
   .desencriptar {
     display: block;
-    font-size: larger;
+    font-size: 1.3rem;
   }
   .input,
   .resultado {
@@ -166,9 +166,16 @@ div.area-output {
     box-sizing: border-box;
   }
   div.area-output {
-    background-position-y: calc(100% + 4rem);
+    background-position-y: calc(100% + 1rem);
     font-size: 0.7rem;
     box-sizing: border-box;
+  }
+  .reset,
+  .enviar,
+  .copiar,
+  .desencriptar {
+    display: block;
+    font-size: 1rem;
   }
 }
 @media (max-width: 300px) {
@@ -180,7 +187,7 @@ div.area-output {
     display: none;
   }
   div.area-output {
-    background-position-y: calc(100% + 4rem);
+    background-position-y: calc(100% + 2rem);
     font-size: 0.5rem;
     box-sizing: border-box;
   }
