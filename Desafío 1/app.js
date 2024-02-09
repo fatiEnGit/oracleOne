@@ -1,5 +1,6 @@
 let contenedor = ["ai", "enter", "imes", "ober", "ufat"];
 let caracteresEspeciales = /[^\w\sñ]/g;
+let numeros = /\d/g;
 let enviar = document.querySelector(".enviar");
 enviar.addEventListener("click", function () {
   let input = document.querySelector(".input");
@@ -7,7 +8,8 @@ enviar.addEventListener("click", function () {
   let resultado = document.querySelector(".resultado");
   let areaOutput = document.querySelector(".area-output");
   let newInput = "";
-  if (inputLower === input.value && !caracteresEspeciales.test(input.value)) {
+  if (inputLower === input.value && !caracteresEspeciales.test(input.value)&&
+    !numeros.test(input.value)) {
     for (let i = 0; i < input.value.length; i++) {
       if (input.value[i] === "a") {
         newInput += contenedor[0];
