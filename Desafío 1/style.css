@@ -60,6 +60,8 @@ div.area-output {
   border-radius: 0.3125rem; /* Equivalente a 5px (0.3125 * 16px) */
   font-size: 1rem;
   border-color: aqua;
+    margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .input:active {
